@@ -1,0 +1,28 @@
+---
+// filepath: c:\Users\a_ole\Documents\arteventy\website\src\pages\blog\[slug].astro
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const posts = await getCollection("blog");
+const post = posts.find((p) => p.slug === slug);
+
+if (!post) {
+  throw new Error(`Post not found: ${slug}`);
+}
+---
+<Layout>
+  <h1>{post.data.title}</h1>
+  <p><strong>Autor:</strong> {post.data.author}</p>
+  <p><strong>Data:</strong> {post.data.date}</p>
+  <article>
+    <Fragment set:html={post.body} />
+  </article>
+</Layout>

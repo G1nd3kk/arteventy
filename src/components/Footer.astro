@@ -1,0 +1,54 @@
+---
+import texts from '../content/texts.json';
+
+import FacebookIcon from '../assets/facebook.svg?raw';
+import InstagramIcon from '../assets/instagram.svg?raw';
+
+const { isAlone = true } = Astro.props;
+---
+
+<footer class={`bg-grey w-full ${isAlone ? "mt-24" : ""}`}>
+    <div class={`flex flex-col w-full px-8 md:px-16 max-w-[1440px] box-border mx-auto ${isAlone ? "pt-10" : "pt-12"} gap-12 md:gap-24`}>
+        <div class="w-full flex flex-col flex-wrap gap-8 lg:flex-row lg:justify-between">
+            <div class="w-fit flex flex-col md:max-lg:flex-row gap-4 md:max-lg:gap-8 lg:gap-6">
+                <a href="/" class="w-fit">
+                    <img src="/images/logo-scaled.png" alt="ART Eventy" class="h-[30px] w-[131px] max-w-none shrink-0" />
+                </a>
+                <p class="text-base text-text max-w-[480px] md:max-lg:max-w-none w-full">
+                    {texts.layout.footer.paragraph}
+                </p>
+            </div>
+            <div class="flex flex-col flex-wrap md:flex-row gap-3 md:gap-8 md:gap-y-4!">
+                <a href="/wkrotce" class="text-base h-[30px] flex items-center text-nowrap text-dark hover:underline">Strona główna</a>
+                <a href="/wkrotce" class="text-base h-[30px] flex items-center text-nowrap text-dark hover:underline">O nas</a>
+                <a href="/wkrotce" class="text-base h-[30px] flex items-center text-nowrap text-dark hover:underline">Oferta</a>
+                <a href="/wkrotce" class="text-base h-[30px] flex items-center text-nowrap text-dark hover:underline">Galeria</a>
+                <a href="/wkrotce" class="text-base h-[30px] flex items-center text-nowrap text-dark hover:underline">Blog</a>
+                <a href="/wkrotce" class="text-base h-[30px] flex items-center text-nowrap text-dark hover:underline">Kontakt</a>
+                <a href="/wkrotce" class="text-base h-[30px] flex items-center text-nowrap text-dark hover:underline">Polityka prywatności</a>
+            </div>
+        </div>
+        <div class="flex md:hidden flex-row gap-6 mx-auto">
+            <a href="https://facebook.com/" target="_blank">
+                <Fragment set:html={FacebookIcon} />
+            </a>
+            <a href="https://instagram.com/" target="_blank">
+                <Fragment set:html={InstagramIcon} />
+            </a>
+        </div>
+        <div class="w-full flex flex-col">
+            <div class="w-full h-[1px] bg-text"></div>
+            <div class="flex flex-row md:justify-between w-full py-8">
+                <span class="text-base text-text">{texts.layout.footer.copyright}</span>
+                <div class="hidden md:flex flex-row gap-6">
+                    <a href="https://facebook.com/" target="_blank">
+                        <Fragment set:html={FacebookIcon} />
+                    </a>
+                    <a href="https://instagram.com/" target="_blank">
+                        <Fragment set:html={InstagramIcon} />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

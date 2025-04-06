@@ -1,0 +1,52 @@
+{
+  "layout": {
+    "header": {
+      "button": "Skontaktuj się"
+    },
+    "CTA": {
+      "title": "Spraw, by Twoja impreza\nteż była wyjątkowa!",
+      "button": "Zarezerwuj teraz"
+    },
+    "footer": {
+      "paragraph": "Z pasją zamieniamy każdą okazję w magiczną przygodę, pełną śmiechu, zabawy i niezapomnianych wrażeń!",
+      "copyright": "© 2077 ArtEventy. Wszelkie prawa zastrzeżone."
+    }
+  },
+  "index": {
+    "hero": {
+      "title": "Niezapomniane doświadczenia\ndla Twojego dziecka!",
+      "subtitle": "Z pasją zamieniamy każdą okazję w magiczną przygodę, pełną śmiechu, zabawy i niezapomnianych wrażeń!",
+      "button": "Zarezerwuj teraz"
+    },
+    "oferta": {
+      "title": "Odkryj naszą ofertę\npełną atrakcji",
+      "button": "Zobacz wszystko",
+      "card1": "Animacje dla\ndzieci",
+      "card2": "Atrakcje na\nwynajem",
+      "card3": "Wydarzenia\nspecjalne",
+      "cardButtons": "Przeglądaj"
+    },
+    "galeria": {
+      "title": "Zobacz nasze wydarzenia\nna zdjęciach",
+      "button": "Zobacz galerię"
+    },
+    "opinie": {
+      "title": "Sprawdź, co mówią\nnasi klienci",
+      "testimonial1": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM Mega zabawa, radość i pełno humoru dla pracowników.",
+      "testimonial1Author": "Sandra",
+      "testimonial2": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM",
+      "testimonial2Author": "Mikołaj",
+      "testimonial3": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM",
+      "testimonial3Author": "Kamila",
+      "testimonial4": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM",
+      "testimonial4Author": "Andrzej",
+      "testimonial5": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM",
+      "testimonial5Author": "Krystyna"
+    },
+    "blog": {
+      "title": "Sprawdź, co nowego\nw świecie eventów!",
+      "button": "Odwiedź bloga",
+      "postButton": "Czytaj więcej"
+    }
+  }
+}

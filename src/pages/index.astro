@@ -1,0 +1,324 @@
+---
+import Layout from "../layouts/Layout.astro";
+import texts from "../content/texts.json";
+import { Image } from "astro:assets";
+
+import ArrowIcon from "../assets/arrow.svg?raw";
+
+import SquiggleIcon1 from "../assets/squiggle1.svg?raw";
+import SquiggleIcon2 from "../assets/squiggle2.svg?raw";
+import SquiggleIcon3 from "../assets/squiggle3.svg?raw";
+import SquiggleIcon4 from "../assets/squiggle4.svg?raw";
+import SquiggleIcon5 from "../assets/squiggle5.svg?raw";
+
+import Image1 from "../assets/image1.jpg";
+import Image2 from "../assets/image2.jpg";
+import Image3 from "../assets/image3.jpg";
+import Image4 from "../assets/image4.jpg";
+
+import Illustration1 from "../assets/illustration1.png";
+import Illustration2 from "../assets/illustration2.png";
+import Illustration3 from "../assets/illustration3.png";
+
+import TestimonialSlider from "../components/TestimonialSlider.jsx";
+
+import { getCollection } from "astro:content";
+const posts = await getCollection("blog");
+const latestPosts = posts
+  .sort(
+    (a: { data: { date: string } }, b: { data: { date: string } }) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  )
+  .slice(0, 2);
+---
+
+<Layout>
+  <div id="hero" class="w-full flex flex-col items-center">
+    <div
+      class="flex flex-col items-center gap-8 md:gap-12 w-full h-fit max-w-[1440px] mx-auto relative pb-12 md:max-lg:pb-16 lg:pb-0 transition-all duration-75 ease-in-out"
+    >
+      <div
+        class="z-[1] flex flex-col items-center gap-4 md:gap-6 px-8 md:px-16 pt-16 md:pt-24 box-border w-full"
+      >
+        <h1
+          class="break-text-lg text-4xl md:text-6xl w-fit text-dark text-center font-bold md:leading-[72px]"
+        >
+          {texts.index.hero.title}
+        </h1>
+        <p class="max-w-2xl text-lg md:text-xl text-center text-text">
+          {texts.index.hero.subtitle}
+        </p>
+      </div>
+      <a href="/wkrotce" class="button-lg button-green z-[1]"
+        ><span>{texts.index.hero.button}</span><div class="arrow">
+          <Fragment set:html={ArrowIcon} />
+        </div></a
+      >
+      <div class="absolute w-full h-full z-0">
+        <div class="relative w-full h-full">
+          <div
+            class="absolute left-[16%] top-[30px] md:max-lg:left-[16%] md:max-lg:top-[70px] lg:left-[22%] lg:top-[30px] transition-all duration-300 ease-in-out"
+          >
+            <Fragment set:html={SquiggleIcon1} />
+          </div>
+          <div
+            class="absolute right-[22%] top-[20px] md:max-lg:right-[34%] md:max-lg:top-[50px] lg:right-[39%] lg:top-[20px] transition-all duration-300 ease-in-out"
+          >
+            <Fragment set:html={SquiggleIcon2} />
+          </div>
+          <div
+            class="absolute left-[2%] bottom-[50px] md:max-lg:left-[8%] md:max-lg:bottom-[50px] lg:left-[8%] lg:bottom-[40px] transition-all duration-300 ease-in-out"
+          >
+            <Fragment set:html={SquiggleIcon3} />
+          </div>
+          <div
+            class="absolute right-[5%] bottom-[60px] md:max-lg:right-[15%] md:max-lg:bottom-[60px] lg:right-[27%] lg:bottom-[10px] transition-all duration-300 ease-in-out"
+          >
+            <Fragment set:html={SquiggleIcon4} />
+          </div>
+          <div
+            class="hidden lg:block absolute right-[9%] bottom-[170px] transition-all duration-300 ease-in-out"
+          >
+            <Fragment set:html={SquiggleIcon5} />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative h-[356px] lg:h-fit flex flex-row justify-between w-full px-8 md:px-16 box-border max-w-[1440px] mx-auto"
+    >
+      <Image
+        src={Image1}
+        alt="Dmuchańce"
+        width={260}
+        class="absolute left-0 top-0 lg:static rounded-[40px] w-[55%] h-[260px] lg:w-[260px] lg:h-[360px] object-cover ml-8 lg:ml-0 hover:scale-105 transition-all duration-75 ease-in-out"
+      />
+      <Image
+        src={Image2}
+        alt="Malowanie twarzy"
+        height={360}
+        class="absolute right-0 top-0 lg:static rounded-[40px] w-[55%] h-[260px] lg:w-[260px] lg:h-[360px] object-cover mr-8 lg:mr-0 mt-24 md:mt-16 hover:scale-105 transition-all duration-75 ease-in-out"
+      />
+      <Image
+        src={Image3}
+        alt="Malowanie twarzy"
+        height={360}
+        class="hidden xl:block rounded-[40px] w-[260px] h-[360px] object-cover lg:mt-16 hover:scale-105 transition-all duration-75 ease-in-out"
+      />
+      <Image
+        src={Image4}
+        alt="Bańki"
+        width={260}
+        class="hidden lg:block rounded-[40px] w-[260px] h-[360px] object-cover hover:scale-105 transition-all duration-75 ease-in-out"
+      />
+    </div>
+  </div>
+  <div
+    id="oferta"
+    class="w-full flex flex-col mx-auto pt-24 px-8 md:px-16 max-w-[1440px] box-border gap-12 items-center"
+  >
+    <div class="w-full flex flex-row md:justify-between items-center">
+      <h2 class="text-2xl md:text-4xl break-text poppins font-semibold">
+        {texts.index.oferta.title}
+      </h2>
+      <a href="/wkrotce" class="hidden! md:flex! button-lg button-pink"
+        ><span>{texts.index.oferta.button}</span><div class="arrow">
+          <Fragment set:html={ArrowIcon} />
+        </div></a
+      >
+    </div>
+    <div class="flex flex-col w-full gap-8">
+      <div class="flex flex-col w-full lg:flex-row gap-8 lg:gap-16">
+        <div
+          class="offer-card offer-card-pink hover:scale-105 transition-all duration-75 ease-in-out"
+        >
+          <h3 class="break-text poppins">{texts.index.oferta.card1}</h3>
+          <div class="offer-card-content">
+            <Image
+              src={Illustration1}
+              alt="Animacje dla dzieci"
+              class="offer-card-image w-[150%] left-1/2 top-1/3 md:max-lg:w-[120%]"
+            />
+            <a href="/wkrotce" class="offer-card-button"
+              ><span>{texts.index.oferta.cardButtons}</span><div class="arrow">
+                <Fragment set:html={ArrowIcon} />
+              </div></a
+            >
+          </div>
+        </div>
+        <div
+          class="offer-card offer-card-blue hover:scale-105 transition-all duration-75 ease-in-out"
+        >
+          <h3 class="break-text poppins">{texts.index.oferta.card2}</h3>
+          <div class="offer-card-content">
+            <Image
+              src={Illustration2}
+              alt="Atrakcje na wynajem"
+              class="offer-card-image w-[100%] left-1/2 top-2/3 md:max-lg:top-[90%] lg:top-[75%]"
+            />
+            <a href="/wkrotce" class="offer-card-button"
+              ><span>{texts.index.oferta.cardButtons}</span><div class="arrow">
+                <Fragment set:html={ArrowIcon} />
+              </div></a
+            >
+          </div>
+        </div>
+        <div
+          class="offer-card offer-card-green hover:scale-105 transition-all duration-75 ease-in-out"
+        >
+          <h3 class="break-text poppins">{texts.index.oferta.card3}</h3>
+          <div class="offer-card-content">
+            <Image
+              src={Illustration3}
+              alt="Wydarzenia specjalne"
+              class="offer-card-image w-[110%] left-1/2 top-[55%] md:max-lg:w-[120%] lg:top-[65%]"
+            />
+            <a href="/wkrotce" class="offer-card-button"
+              ><span>{texts.index.oferta.cardButtons}</span><div class="arrow">
+                <Fragment set:html={ArrowIcon} />
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:hidden">
+        <a href="/wkrotce" class="button-lg button-pink mx-auto"
+          ><span>{texts.index.oferta.button}</span><div class="arrow">
+            <Fragment set:html={ArrowIcon} />
+          </div></a
+        >
+      </div>
+    </div>
+  </div>
+  <div
+    id="galeria"
+    class="w-full flex flex-col mx-auto pt-24 px-8 md:px-16 pb-8 max-w-[1440px] box-border gap-12 items-center"
+  >
+    <div class="flex flex-col gap-12 md:gap-18 items-center w-full">
+      <div class="w-full flex flex-row md:justify-between items-center">
+        <h2 class="text-2xl md:text-4xl break-text poppins font-semibold">
+          {texts.index.galeria.title}
+        </h2>
+        <a href="/wkrotce" class="hidden! md:flex! button-lg button-green"
+          ><span>{texts.index.galeria.button}</span><div class="arrow">
+            <Fragment set:html={ArrowIcon} />
+          </div></a
+        >
+      </div>
+      <div class="w-full flex flex-col md:flex-row justify-between box-border">
+        <div
+          class="gallery-card rotate-[-15deg] ml-[4vw] md:ml-0 hover:rotate-0 z-[1] hover:scale-[115%] hover:z-[6] transition-all duration-100"
+        >
+        </div>
+        <div
+          class="gallery-card rotate-[-15deg] mt-[-8vh] md:mt-0 ml-[4vw] md:ml-[-5vw] hover:rotate-0 z-[2] hover:scale-[115%] hover:z-[6] transition-all duration-100"
+        >
+        </div>
+        <div
+          class="gallery-card rotate-[-15deg] mt-[-8vh] md:mt-0 ml-[4vw] md:ml-[-5vw] hover:rotate-0 z-[3] hover:scale-[115%] hover:z-[6] transition-all duration-100"
+        >
+        </div>
+        <div
+          class="gallery-card hidden md:block rotate-[-15deg] ml-[3vw] md:ml-[-5vw] hover:rotate-0 z-[4] hover:scale-[115%] hover:z-[6] transition-all duration-100"
+        >
+        </div>
+        <div
+          class="gallery-card hidden lg:block rotate-[-15deg] ml-[3vw] md:ml-[-5vw] hover:rotate-0 z-[5] hover:scale-[115%] hover:z-[6] transition-all duration-100"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:hidden">
+      <a href="/wkrotce" class="button-lg button-green mx-auto"
+        ><span>{texts.index.galeria.button}</span><div class="arrow">
+          <Fragment set:html={ArrowIcon} />
+        </div></a
+      >
+    </div>
+  </div>
+  <div
+    id="opinie"
+    class="w-full flex flex-col mx-auto pt-24 px-8 md:px-16 max-w-[1440px] box-border gap-12 items-center"
+  >
+    <div class="w-full flex flex-col items-center gap-8 md:gap-12">
+      <h2
+        class="text-2xl md:text-4xl text-center break-text poppins font-semibold"
+      >
+        {texts.index.opinie.title}
+      </h2>
+      <TestimonialSlider client:load />
+    </div>
+  </div>
+  <div
+    id="blog"
+    class="w-full flex flex-col mx-auto pt-24 px-8 md:px-16 max-w-[1440px] box-border gap-12 items-center"
+  >
+    <div class="w-full flex flex-row md:justify-between items-center">
+      <h2 class="text-2xl md:text-4xl break-text poppins font-semibold">
+        {texts.index.blog.title}
+      </h2>
+      <a href="/wkrotce" class="hidden! md:flex! button-lg button-blue"
+        ><span>{texts.index.blog.button}</span><div class="arrow">
+          <Fragment set:html={ArrowIcon} />
+        </div></a
+      >
+    </div>
+    <div class="flex flex-col w-full gap-8">
+      <div class="w-full flex flex-col md:flex-row gap-12">
+        {
+          latestPosts.map(
+            (post: {
+              data: {
+                title: string;
+                date: string;
+                excerpt?: string;
+                image_src?: string;
+              };
+              body: string;
+              slug: string;
+            }) => (
+              <div class="w-full flex flex-col gap-3 lg:gap-6 lg:flex-row">
+                <a
+                  href="/wkrotce"
+                  class="flex lg:w-[46%] h-[240px] rounded-[40px] overflow-hidden shrink-0 hover:scale-105 transition-all duration-75 ease-in-out"
+                >
+                  <img
+                    src={"/images/blog/" + post.data.image_src}
+                    alt={post.data.title}
+                    class="w-full h-full object-cover"
+                  />
+                </a>
+                <div class="flex flex-col justify-between lg:py-3 gap-6">
+                  <div class="flex flex-col gap-1 lg:gap-2">
+                    <span class="text-base text-text font-medium">
+                      {new Date(post.data.date).toLocaleDateString()}
+                    </span>
+                    <a href="/wkrotce">
+                      <h3 class="text-2xl font-medium poppins">
+                        {post.data.title}
+                      </h3>
+                    </a>
+                  </div>
+                  <a
+                    href={`/blog/${post.slug}`}
+                    class="blog-post-shortcut-button flex flex-row items-center text-base font-semibold text-pink underline hover:text-pink-hover gap-2.5"
+                  >
+                    <span>{texts.index.blog.postButton}</span>
+                    <Fragment set:html={ArrowIcon} />
+                  </a>
+                </div>
+              </div>
+            )
+          )
+        }
+      </div>
+      <div class="w-full md:hidden">
+        <a href="/wkrotce" class="button-lg button-blue mx-auto"
+          ><span>{texts.index.blog.button}</span><div class="arrow">
+            <Fragment set:html={ArrowIcon} />
+          </div></a
+        >
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: G1nd3kk/arteventy
+  branch: main
+
+media_folder: "public/images/uploads" # Gdzie będą przechowywane obrazy
+public_folder: "/images/uploads" # Publiczny URL dla obrazów
+
+collections:
+  - name: "blog" # Nazwa kolekcji
+    label: "Blog" # Wyświetlana nazwa w CMS
+    folder: "src/content/blog" # Folder, w którym znajdują się posty
+    create: true # Pozwala na tworzenie nowych postów
+    slug: "{{slug}}" # Automatyczne generowanie slugów
+    fields:
+      - { name: "title", label: "Tytuł", widget: "string" }
+      - { name: "date", label: "Data", widget: "datetime" }
+      - { name: "image_src", label: "Obraz", widget: "image" }
+      - { name: "body", label: "Treść", widget: "markdown" }

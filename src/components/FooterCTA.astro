@@ -1,0 +1,64 @@
+---
+import texts from '../content/texts.json';
+
+import ArrowIcon from '../assets/arrow.svg?raw';
+
+import SquiggleIcon1 from "../assets/squiggle1.svg?raw";
+import SquiggleIcon2 from "../assets/squiggle2.svg?raw";
+import SquiggleIcon3 from "../assets/squiggle3.svg?raw";
+import SquiggleIcon4 from "../assets/squiggle4.svg?raw";
+import SquiggleIcon5 from "../assets/squiggle5.svg?raw";
+
+import Footer from './Footer.astro';
+---
+
+<div class="w-full pt-24">
+    <div class="flex justify-center w-full relative md:px-16 box-border overflow-hidden md:pb-2">
+        <div class="relative flex justify-center items-center w-full max-w-[1312px] md:border-blue bg-white md:border-2 rounded-[40px] outline-4 outline-white z-[1]">
+            <div class="w-fit flex flex-col items-center gap-8 md:gap-12 py-18 md:py-24 px-8 z-[3]">
+                <h1
+                class="break-text-lg text-4xl md:text-6xl w-fit text-dark text-center font-bold md:leading-[72px]"
+                >
+                    {texts.layout.CTA.title}
+                </h1>
+                <a href="/wkrotce" class="button-lg button-pink"
+                    ><span>{texts.layout.CTA.button}</span>
+                    <div class="arrow">
+                        <Fragment set:html={ArrowIcon} />
+                    </div></a
+                >
+            </div>
+            <div class="absolute w-full h-full z-[2]">
+                <div class="relative w-full h-full">
+                  <div
+                    class="absolute left-[16%] top-[30px] md:max-lg:left-[16%] md:max-lg:top-[60px] lg:left-[20%] lg:top-[60px] transition-all duration-300 ease-in-out"
+                  >
+                    <Fragment set:html={SquiggleIcon1} />
+                  </div>
+                  <div
+                    class="absolute right-[22%] top-[20px] md:max-lg:right-[34%] md:max-lg:top-[50px] lg:right-[39%] lg:top-[30px] transition-all duration-300 ease-in-out"
+                  >
+                    <Fragment set:html={SquiggleIcon2} />
+                  </div>
+                  <div
+                    class="absolute left-[2%] bottom-[50px] md:max-lg:left-[8%] md:max-lg:bottom-[70px] lg:left-[12%] lg:bottom-[70px] transition-all duration-300 ease-in-out"
+                  >
+                    <Fragment set:html={SquiggleIcon3} />
+                  </div>
+                  <div
+                    class="absolute right-[5%] bottom-[60px] md:max-lg:right-[15%] md:max-lg:bottom-[75px] lg:right-[28%] lg:bottom-[60px] transition-all duration-300 ease-in-out"
+                  >
+                    <Fragment set:html={SquiggleIcon4} />
+                  </div>
+                  <div
+                    class="hidden lg:block absolute right-[10%] bottom-[170px] transition-all duration-300 ease-in-out"
+                  >
+                    <Fragment set:html={SquiggleIcon5} />
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="hidden md:block absolute top-1/2 left-1/2 w-full bg-grey h-1/2 translate-x-[-50%] z-0"></div>
+    </div>
+    <Footer isAlone={false} />
+</div>
