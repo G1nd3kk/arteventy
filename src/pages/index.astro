@@ -11,14 +11,14 @@ import SquiggleIcon3 from "../assets/squiggle3.svg?raw";
 import SquiggleIcon4 from "../assets/squiggle4.svg?raw";
 import SquiggleIcon5 from "../assets/squiggle5.svg?raw";
 
-import Image1 from "../assets/image1.jpg";
-import Image2 from "../assets/image2.jpg";
-import Image3 from "../assets/image3.jpg";
-import Image4 from "../assets/image4.jpg";
+import Picture1 from "../assets/picture1.webp";
+import Picture2 from "../assets/picture2.webp";
+import Picture3 from "../assets/picture3.webp";
+import Picture4 from "../assets/picture4.webp";
 
-import Illustration1 from "../assets/illustration1.png";
-import Illustration2 from "../assets/illustration2.png";
-import Illustration3 from "../assets/illustration3.png";
+import Illustration1 from "../assets/illustration1.webp";
+import Illustration2 from "../assets/illustration2.webp";
+import Illustration3 from "../assets/illustration3.webp";
 
 import TestimonialSlider from "../components/TestimonialSlider.jsx";
 
@@ -27,12 +27,15 @@ const posts = await getCollection("blog");
 const latestPosts = posts
   .sort(
     (a: { data: { date: string } }, b: { data: { date: string } }) =>
-      new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
   .slice(0, 2);
 ---
 
-<Layout>
+<Layout
+  title="ART Eventy - Twoje wydarzenie, nasza pasja"
+  description="ART Eventy to firma zajmująca się organizacją wydarzeń. Oferujemy szeroki wachlarz usług, które sprawią, że Twoje wydarzenie będzie niezapomniane."
+>
   <div id="hero" class="w-full flex flex-col items-center">
     <div
       class="flex flex-col items-center gap-8 md:gap-12 w-full h-fit max-w-[1440px] mx-auto relative pb-12 md:max-lg:pb-16 lg:pb-0 transition-all duration-75 ease-in-out"
@@ -88,27 +91,27 @@ const latestPosts = posts
       class="relative h-[356px] lg:h-fit flex flex-row justify-between w-full px-8 md:px-16 box-border max-w-[1440px] mx-auto"
     >
       <Image
-        src={Image1}
+        src={Picture1}
         alt="Dmuchańce"
-        width={260}
+        width={555}
         class="absolute left-0 top-0 lg:static rounded-[40px] w-[55%] h-[260px] lg:w-[260px] lg:h-[360px] object-cover ml-8 lg:ml-0 hover:scale-105 transition-all duration-75 ease-in-out"
       />
       <Image
-        src={Image2}
+        src={Picture2}
         alt="Malowanie twarzy"
-        height={360}
+        height={555}
         class="absolute right-0 top-0 lg:static rounded-[40px] w-[55%] h-[260px] lg:w-[260px] lg:h-[360px] object-cover mr-8 lg:mr-0 mt-24 md:mt-16 hover:scale-105 transition-all duration-75 ease-in-out"
       />
       <Image
-        src={Image3}
+        src={Picture3}
         alt="Malowanie twarzy"
-        height={360}
+        height={555}
         class="hidden xl:block rounded-[40px] w-[260px] h-[360px] object-cover lg:mt-16 hover:scale-105 transition-all duration-75 ease-in-out"
       />
       <Image
-        src={Image4}
+        src={Picture4}
         alt="Bańki"
-        width={260}
+        width={555}
         class="hidden lg:block rounded-[40px] w-[260px] h-[360px] object-cover hover:scale-105 transition-all duration-75 ease-in-out"
       />
     </div>
@@ -138,6 +141,7 @@ const latestPosts = posts
               src={Illustration1}
               alt="Animacje dla dzieci"
               class="offer-card-image w-[150%] left-1/2 top-1/3 md:max-lg:w-[120%]"
+              loading={"lazy"}
             />
             <a href="/wkrotce" class="offer-card-button"
               ><span>{texts.index.oferta.cardButtons}</span><div class="arrow">
@@ -155,6 +159,7 @@ const latestPosts = posts
               src={Illustration2}
               alt="Atrakcje na wynajem"
               class="offer-card-image w-[100%] left-1/2 top-2/3 md:max-lg:top-[90%] lg:top-[75%]"
+              loading={"lazy"}
             />
             <a href="/wkrotce" class="offer-card-button"
               ><span>{texts.index.oferta.cardButtons}</span><div class="arrow">
@@ -172,6 +177,7 @@ const latestPosts = posts
               src={Illustration3}
               alt="Wydarzenia specjalne"
               class="offer-card-image w-[110%] left-1/2 top-[55%] md:max-lg:w-[120%] lg:top-[65%]"
+              loading={"lazy"}
             />
             <a href="/wkrotce" class="offer-card-button"
               ><span>{texts.index.oferta.cardButtons}</span><div class="arrow">
@@ -283,7 +289,7 @@ const latestPosts = posts
                   class="flex lg:w-[46%] h-[240px] rounded-[40px] overflow-hidden shrink-0 hover:scale-105 transition-all duration-75 ease-in-out"
                 >
                   <img
-                    src={"/images/blog/" + post.data.image_src}
+                    src={post.data.image_src}
                     alt={post.data.title}
                     class="w-full h-full object-cover"
                   />
@@ -308,7 +314,7 @@ const latestPosts = posts
                   </a>
                 </div>
               </div>
-            )
+            ),
           )
         }
       </div>

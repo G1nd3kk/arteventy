@@ -1,1 +1,35 @@
-<p>juz wkrotce</p>
+---
+import Layout from "../layouts/Layout.astro";
+
+import ArrowIcon from "../assets/arrow.svg?raw";
+
+import SquiggleIcon1 from "../assets/squiggle1.svg?raw";
+import SquiggleIcon2 from "../assets/squiggle2.svg?raw";
+import SquiggleIcon3 from "../assets/squiggle3.svg?raw";
+import SquiggleIcon4 from "../assets/squiggle4.svg?raw";
+import SquiggleIcon5 from "../assets/squiggle5.svg?raw";
+---
+
+<Layout
+  cta={false}
+  title="ART Eventy - Już wkrótce..."
+  description="Strona ART Eventy jest w budowie. Już wkrótce będzie dostępna!"
+>
+  <div
+    class="flex items-center justify-center"
+    style="height: calc(100vh - 176px)"
+  >
+    <div class="flex flex-col items-center gap-6 md:gap-10 px-8 md:px-16">
+      <h1
+        class="text-4xl md:text-6xl w-fit text-dark text-center font-bold md:leading-[72px]"
+      >
+        Ta strona będzie dostępna<br />już wkrótce...
+      </h1>
+      <a href="/" class="button-lg button-green"
+        ><span>Powrót</span><div class="arrow">
+          <Fragment set:html={ArrowIcon} />
+        </div></a
+      >
+    </div>
+  </div>
+</Layout>

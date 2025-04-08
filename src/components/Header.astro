@@ -5,21 +5,21 @@ import MenuIcon from "../assets/menu.svg?raw";
 ---
 
 <script>
-    if (typeof window !== "undefined") {
-        const handleScroll = () => {
-            const header = document.getElementById("header");
-            if (header) {
-                if (window.scrollY > 0) {
-                    header.classList.add("scrolled", "shadow-xs");
-                } else {
-                header.classList.remove("scrolled", "shadow-xs");
-                }
+  if (typeof window !== "undefined") {
+    const handleScroll = () => {
+      const header = document.getElementById("header");
+      if (header) {
+        if (window.scrollY > 0) {
+          header.classList.add("scrolled", "shadow-xs");
+        } else {
+          header.classList.remove("scrolled", "shadow-xs");
         }
+      }
     };
 
     document.addEventListener("DOMContentLoaded", () => {
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
+      handleScroll();
+      window.addEventListener("scroll", handleScroll);
 
       const menuButton = document.querySelector("#menu-button");
       const hamburgerMenu = document.getElementById("hamburger-menu");
@@ -30,39 +30,80 @@ import MenuIcon from "../assets/menu.svg?raw";
         });
       }
     });
-    }
+  }
 </script>
 
 <header>
-    <div class="placehloder w-full h-[80px]"></div>
-    <div id="header" class="header fixed w-full h-[80px] top-0 left-0 bg-white z-100 box-border">
-        <div class="w-full relative flex flex-row justify-between px-8 md:px-16 max-w-[1440px] h-full mx-auto items-center">
-            <a href="/"><img src="/images/logo-scaled.png" alt="ART Eventy" class="w-[131px] h-[30px]"></a>
-            <div class="hidden lg:flex flex-row gap-8 items-center absolute top-1/2 left-1/2 -translate-1/2">
-                <a href="/wkrotce" class="text-base text-dark hover:underline">O nas</a>
-                <a href="/wkrotce" class="text-base text-dark hover:underline">Oferta</a>
-                <a href="/wkrotce" class="text-base text-dark hover:underline">Galeria</a>
-                <a href="/wkrotce" class="text-base text-dark hover:underline">Blog</a>
-            </div>
-            <div id="hamburger-menu" class="z-[50] opacity-0 pointer-events-none fixed flex flex-col lg:hidden top-[80px] left-0 w-full bg-white overflow-hidden h-0 transition-all duration-150 ease-in-out">
-                <div class="flex flex-col items-start justify-start h-full">
-                    <a href="/wkrotce" class="w-full text-base text-dark hover:underline py-4 px-8 md:px-16">O nas</a>
-                    <a href="/wkrotce" class="w-full text-base text-dark hover:underline py-4 px-8 md:px-16">Oferta</a>
-                    <a href="/wkrotce" class="w-full text-base text-dark hover:underline py-4 px-8 md:px-16">Galeria</a>
-                    <a href="/wkrotce" class="w-full text-base text-dark hover:underline py-4 px-8 md:px-16">Blog</a>
-                    <a href="/wkrotce" class="w-full text-base text-pink font-semibold underline py-4 px-8 md:px-16">Kontakt</a>
-                </div>
-
-            </div>
-            <a href="/wkrotce" class="nav-button hidden! lg:flex! p-[3px] pl-4! border-dark bg-white border-[1px] rounded-full items-center gap-2 w-fit h-fit hover:bg-white-hover transition-all duration-75 ease-in-out"
-                ><span class="text-base text-dark">{texts.layout.header.button}</span>
-                <div class="nav-button-icon-container p-3 rounded-full bg-pink">
-                    <Fragment set:html={ArrowIcon} />
-                </div> 
-            </a>
-            <button id="menu-button" class="lg:hidden">
-                <Fragment set:html={MenuIcon} />
-            </button>
+  <div class="placehloder w-full h-[80px]"></div>
+  <div
+    id="header"
+    class="header fixed w-full h-[80px] top-0 left-0 bg-white z-100 box-border"
+  >
+    <div
+      class="w-full relative flex flex-row justify-between px-8 md:px-16 max-w-[1440px] h-full mx-auto items-center"
+    >
+      <a href="/"
+        ><img
+          src="/images/logo.webp"
+          alt="ART Eventy"
+          class="w-[131px] h-[30px]"
+          loading="eager"
+        /></a
+      >
+      <div
+        class="hidden lg:flex flex-row gap-8 items-center absolute top-1/2 left-1/2 -translate-1/2"
+      >
+        <a href="/wkrotce" class="text-base text-dark hover:underline">O nas</a>
+        <a href="/wkrotce" class="text-base text-dark hover:underline">Oferta</a
+        >
+        <a href="/wkrotce" class="text-base text-dark hover:underline"
+          >Galeria</a
+        >
+        <a href="/wkrotce" class="text-base text-dark hover:underline">Blog</a>
+      </div>
+      <div
+        id="hamburger-menu"
+        class="z-[50] opacity-0 pointer-events-none fixed flex flex-col lg:hidden top-[80px] left-0 w-full bg-white overflow-hidden h-0 transition-all duration-150 ease-in-out"
+      >
+        <div class="flex flex-col items-start justify-start h-full">
+          <a
+            href="/wkrotce"
+            class="w-full text-base text-dark hover:underline py-4 px-8 md:px-16"
+            >O nas</a
+          >
+          <a
+            href="/wkrotce"
+            class="w-full text-base text-dark hover:underline py-4 px-8 md:px-16"
+            >Oferta</a
+          >
+          <a
+            href="/wkrotce"
+            class="w-full text-base text-dark hover:underline py-4 px-8 md:px-16"
+            >Galeria</a
+          >
+          <a
+            href="/wkrotce"
+            class="w-full text-base text-dark hover:underline py-4 px-8 md:px-16"
+            >Blog</a
+          >
+          <a
+            href="/wkrotce"
+            class="w-full text-base text-pink font-semibold underline py-4 px-8 md:px-16"
+            >Kontakt</a
+          >
         </div>
+      </div>
+      <a
+        href="/wkrotce"
+        class="nav-button hidden! lg:flex! p-[3px] pl-4! border-dark bg-white border-[1px] rounded-full items-center gap-2 w-fit h-fit hover:bg-white-hover transition-all duration-75 ease-in-out"
+        ><span class="text-base text-dark">{texts.layout.header.button}</span>
+        <div class="nav-button-icon-container p-3 rounded-full bg-pink">
+          <Fragment set:html={ArrowIcon} />
+        </div>
+      </a>
+      <button id="menu-button" class="lg:hidden">
+        <Fragment set:html={MenuIcon} />
+      </button>
     </div>
+  </div>
 </header>

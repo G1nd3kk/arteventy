@@ -26,4 +26,4 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: "date", label: "Data", widget: "datetime" }
-      - { name: "image_src", label: "Obraz", widget: "image"}
+      - { name: "image_src", label: "Obraz", widget: "image" }
