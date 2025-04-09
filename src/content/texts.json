@@ -8,14 +8,14 @@
       "button": "Zarezerwuj teraz"
     },
     "footer": {
-      "paragraph": "Z pasją zamieniamy każdą okazję w magiczną przygodę, pełną śmiechu, zabawy i niezapomnianych wrażeń!",
+      "paragraph": "Z pasją tworzymy magiczne przygody, które rozświetlają każde dziecięce przyjęcie śmiechem, radością i niezapomnianą zabawą!",
       "copyright": "© 2077 ArtEventy. Wszelkie prawa zastrzeżone."
     }
   },
   "index": {
     "hero": {
-      "title": "Niezapomniane doświadczenia\ndla Twojego dziecka!",
-      "subtitle": "Z pasją zamieniamy każdą okazję w magiczną przygodę, pełną śmiechu, zabawy i niezapomnianych wrażeń!",
+      "title": "Zamieniamy każde wydarzenie\nw bajkową przygodę!",
+      "subtitle": "Z pasją tworzymy magiczne przygody, które rozświetlają każde dziecięce przyjęcie śmiechem, radością i niezapomnianą zabawą!",
       "button": "Zarezerwuj teraz"
     },
     "oferta": {
@@ -27,24 +27,24 @@
       "cardButtons": "Przeglądaj"
     },
     "galeria": {
-      "title": "Zobacz nasze wydarzenia\nna zdjęciach",
+      "title": "Chwile pełne śmiechu\nuchwycone na zdjęciach",
       "button": "Zobacz galerię"
     },
     "opinie": {
-      "title": "Sprawdź, co mówią\nnasi klienci",
-      "testimonial1": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM Mega zabawa, radość i pełno humoru dla pracowników.",
-      "testimonial1Author": "Sandra",
-      "testimonial2": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM",
-      "testimonial2Author": "Mikołaj",
-      "testimonial3": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM",
-      "testimonial3Author": "Kamila",
-      "testimonial4": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM",
-      "testimonial4Author": "Andrzej",
-      "testimonial5": "Wynajęcie Mikołaja do biura firmowego - rewelacyjna obsługa i pełen profesjonalizm. Mega zabawa, radość i pełno humoru dla pracowników. POLECAM",
-      "testimonial5Author": "Krystyna"
+      "title": "Zobacz co mówią o nas\nrodzice i organizatorzy",
+      "testimonial1": "Fantastyczna zabawa! Dzieci były zachwycone, a organizacja na najwyższym poziomie. Animacje były pełne energii i pomysłowości. Zdecydowanie polecamy każdemu!",
+      "testimonial1Author": "Marta",
+      "testimonial2": "Zaufaliśmy Arteventy przy organizacji animacji na urodzinach i było genialnie! Dzieciaki bawiły się świetnie, a my mieliśmy pełny komfort. Profesjonalizm i radość w jednym!",
+      "testimonial2Author": "Kasia",
+      "testimonial3": "Zdecydowanie najlepsze animacje na jakich byliśmy! Kreatywne zabawy, które angażowały dzieci przez cały czas. Zdecydowanie wrócimy na kolejne okazje!",
+      "testimonial3Author": "Adam",
+      "testimonial4": "Świetna organizacja i dostosowanie do grupy wiekowej! Dzieci były zachwycone warsztatami i animacjami. To była wyjątkowa przygoda, polecamy wszystkim!",
+      "testimonial4Author": "Monika",
+      "testimonial5": "Arteventy to strzał w dziesiątkę! Współpraca przebiegła bez zarzutu, a dzieci świetnie się bawiły. Doskonałe animacje na każde wydarzenie!",
+      "testimonial5Author": "Łukasz"
     },
     "blog": {
-      "title": "Sprawdź, co nowego\nw świecie eventów!",
+      "title": "Porady, inspiracje i pomysły\nna kreatywne przyjęcia",
       "button": "Odwiedź bloga",
       "postButton": "Czytaj więcej"
     }
